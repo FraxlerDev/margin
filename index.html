@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cryptocurrency Margin Trading Profit Calculator</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>Cryptocurrency Margin Trading Profit Calculator</h1>
+	<form>
+		<label for="coin-price">Coin price:</label>
+		<input type="number" id="coin-price" name="coin-price"><br><br>
+
+		<label for="invested-money">Own invested money:</label>
+		<input type="number" id="invested-money" name="invested-money"><br><br>
+
+		<label for="investment-amount">Investment amount:</label>
+		<input type="number" id="investment-amount" name="investment-amount"><br><br>
+	</form>
+		<button type="button" onclick="calculateProfit()">Calculate</button><br>
+		<div class="increase">
+			<p>If the price increases by:</p>
+			<button type="button" onclick="increasePrice()">5%</button>
+			<button type="button" onclick="increasePrice10()">10%</button>
+			<button type="button" onclick="increasePrice15()">15%</button>
+			<button type="button" onclick="increasePrice25()">25%</button>
+			<button type="button" onclick="increasePrice50()">50%</button>
+			<button type="button" onclick="increasePrice100()">100%</button>
+		</div>
+
+		<div class="increase">
+			<p>If the price falls to:</p>
+			<button type="button" class="price-falls" onclick="increasePrice5m()">-5%</button>
+			<button type="button" class="price-falls" onclick="increasePrice10m()">-10%</button>
+			<button type="button" class="price-falls" onclick="increasePrice15m()">-15%</button>
+			<button type="button" class="price-falls" onclick="increasePrice25m()">-25%</button>
+			<button type="button" class="price-falls" onclick="increasePrice50m()">-50%</button>
+			<button type="button" class="price-falls" onclick="increasePrice75m()">-75%</button>
+		</div>
+
+
+	<table>
+		<tr>
+			<th>Coin price</th>
+			<th>Number of coins</th>
+			<th>Own invested money</th>
+			<th>Borrowed money from the exchange</th>
+			<th>Investment amount</th>
+			<th>Profit</th>
+			<th>Net profit</th>
+		</tr>
+		<tr>
+			<td id="coin-price-cell"></td>
+			<td id="num-coins"></td>
+			<td id="invested-money-cell"></td>
+			<td id="borrowed-money"></td>
+			<td id="investment-amount-cell"></td>
+			<td id="profit"></td>
+			<td id="net-profit"></td>
+		</tr>
+		<tr>
+			<td id="coin-price-cell2"></td>
+			<td id="num-coins2"></td>
+			<td id="invested-money-cell2"></td>
+			<td id="borrowed-money2"></td>
+			<td id="investment-amount-cell2"></td>
+			<td id="profit2"></td>
+			<td id="net-profit2"></td>
+		</tr>
+	</table>
+</body>
+</html>
+	
+
+	<script src="js/pnl-calculator.js">
+		
+	</script>
+</body>
+</html>
